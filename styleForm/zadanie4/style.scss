@@ -1,0 +1,47 @@
+@import "_nullstyle.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.container{
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+
+	&__form{
+		display: flex; 
+		flex-direction: column;
+		justify-content: center;
+		&_title{
+			color: $colorTitle;
+			@include fonts(26px, Arial, 600);
+			@include indent(0 10px, 0px);
+		}
+		&_text{
+			@include indent(10px, 0 0 10px 0);
+			color: $colorText;
+		}
+		input{
+			@include indent(10px, 10px);
+			border: 1.5px solid $borderColor;
+
+			&:focus{
+				border: 1.5px solid $borderActive;
+			}
+
+		}
+		&_forget{
+			cursor: pointer;
+			text-align: right;
+			@include fonts(12px, Arial, 0);
+			@include indent(0, 5px 10px 10px 0);
+			text-decoration: underline;
+		}
+		&_btn{
+			cursor: pointer;
+			background: $LinearGradient;
+		}
+	}
+	img{
+		width: 1000px;
+	}
+}

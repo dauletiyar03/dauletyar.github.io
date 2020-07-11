@@ -1,0 +1,80 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+.container{
+	background-color: $bgcnt;
+	max-width: 350px;
+	margin: 50px auto;
+	padding: 100px 70px;
+	position: relative;
+
+	&__item{
+		width: 110px;
+		height: 35px;
+		background-color: rgba(0, 0, 0, 0.1);
+		position: absolute;
+		top: 85px;
+
+		&:nth-child(1){
+			right: 20px;
+			transform: rotate(45deg);
+		}
+		&:nth-child(2){
+			left: 20px;
+			transform: rotate(-45deg);
+		}
+	}
+	&__form{
+		background-color: $bgform;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 0 10px 2px #777;
+
+		&_title{
+			text-align: center;
+			font-size: $fz;
+			font-family: $ff;
+			margin: 40px 0 10px 0;
+			position: relative;
+
+			&:after{
+				content: '';
+				position: absolute;
+				top: 12px;
+				right: 50px;
+				width: 70px;
+				height: 1px;
+				background-color: #000;
+			}
+			&:before{
+				content: '';
+				position: absolute;
+				top: 12px;
+				left: 50px;
+				width: 70px;
+				height: 1px;
+				background-color: #000;
+			}
+		}
+		%message-shared{
+			padding: 5px 40px;
+			margin: 8px 40px;
+			border: 1px solid #ccc;
+		}
+		input, .btn{
+			@extend %message-shared;
+		}
+		.btn{
+			border-radius: 4px;
+			cursor: pointer;
+			margin-bottom: 120px;
+			border: none;
+			background-color: $btncolor;
+			box-shadow: 0 2px 1px #777;
+
+			&:active{
+				transform: translateY(1px);
+			}
+		}
+	}
+}

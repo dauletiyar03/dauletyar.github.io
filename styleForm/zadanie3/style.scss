@@ -1,0 +1,67 @@
+@import "_nullstyle.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.header{
+	background-color: $bgheader;
+	padding: 100px;
+	&__title{
+		text-align: center;
+		font-size: $fz;
+		color: $colorText;
+		font-family: $ff;
+	}
+	&__form{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		&_textInput{
+			background-color: $bgheader;
+			border-bottom: 1px solid $colorText;
+			width: 500px;
+			@include indent(15px, 30px);
+			text-align: center;
+			color: $colorText;
+		}
+		&_btn{
+			background-color: $bgheader;
+			border: 1px  solid $colorText;
+			border-radius: 25px;
+			color: $colorText;
+			cursor: pointer;
+			@include indent(15px 50px, 10px);
+			position: relative;
+
+			&:after{
+				content: "\1433";
+				position: absolute;
+				top: 12.48px;
+				right: 20px;
+				font-size: 15px;
+				opacity: 0;
+				color: $colorText;
+			}
+			&:hover:after{
+				transition: all 0.4s linear 0.4s;
+				opacity: 1;
+			}
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 22px;
+				left: 80px;
+				opacity: 0;
+				width: 25px;
+				height: 1px;
+				background-color: $colorText;
+			}
+			&:hover:before{
+				transition: all 0.5s linear;
+				opacity: 1;
+				left: 120px;
+			}
+		}
+	}
+}

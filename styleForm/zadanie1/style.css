@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.container .form__item:last-child, .container .form__item {
+  margin: 10px 20px;
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+}
+
+body {
+  background: #172945;
+}
+
+.container {
+  max-width: 280px;
+  font-family: arial;
+  color: #fff;
+  margin: 100px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 10px #152235;
+  background-color: #152235;
+  overflow: hidden;
+}
+.container__title {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+}
+.container .form__item {
+  position: relative;
+  padding-top: 20px;
+}
+.container .form_label {
+  position: absolute;
+  padding-top: 20px;
+  left: 5px;
+  top: 5px;
+  transition: top 0.3s linear;
+  z-index: 1;
+}
+.container input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  color: #fff;
+  background-color: #152235;
+}
+.container input:focus + .form_label, .container input:not(:placeholder-shown) + .form_label {
+  top: -15px;
+  color: blue;
+}
+.container ::placeholder {
+  opacity: 0;
+}
+.container input:focus::placeholder {
+  transition: all 0.5s linear;
+  opacity: 1;
+}
+.container .form__item:last-child {
+  margin: 30px 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  width: 82px;
+  overflow: hidden;
+}
+.container .form__item:last-child:hover {
+  box-shadow: 0 0 24px 2px #04e7f8;
+}
+.container .form__item:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(40px);
+  animation: moveBorder-Y 3s linear 3.5s infinite;
+  background: linear-gradient(to bottom, #27c5c6, #185a68) no-repeat;
+  width: 2px;
+  height: 70px;
+}
+@keyframes moveBorder-Y {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+.container .form__item:last-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100px);
+  animation: moveBorderY 3s linear 2.2s infinite;
+  background: linear-gradient(to bottom, #185a68, #27c5c6) no-repeat;
+  width: 2px;
+  height: 70px;
+}
+@keyframes moveBorderY {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.container .form__item:last-child .btn {
+  background-color: #152235;
+  cursor: pointer;
+  letter-spacing: 2px;
+  padding: 10px 10px;
+  color: #409697;
+  text-align: center;
+}
+.container .form__item:last-child .btn:hover {
+  box-shadow: inset 0 0 200px #04e7f8;
+  color: #fff;
+}
+.container .form__item:last-child .btn::before {
+  content: "";
+  animation: moveBorder-X 3s linear 3s infinite;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100px);
+  background: linear-gradient(to right, #27c5c6, #185a68) no-repeat;
+  width: 70px;
+  height: 2px;
+}
+@keyframes moveBorder-X {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+.container .form__item:last-child .btn::after {
+  content: "";
+  animation: moveBorderX 3s linear 1s infinite;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: linear-gradient(to left, #27c5c6, #185a68) no-repeat;
+  width: 70px;
+  height: 2px;
+}
+@keyframes moveBorderX {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}

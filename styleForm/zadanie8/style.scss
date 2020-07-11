@@ -1,0 +1,52 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+
+.authorization{
+	img{
+		width: 100%;
+		filter: blur(3px);
+	}
+
+	position: relative;
+
+	&__form{
+		position: absolute;	
+		top: 100px;
+		right: 300px;
+		display: flex;
+		flex-direction: column;
+
+		&_title{
+			font-size: $fz;
+			font-family: $ff;
+			color: $textColor;
+			position: absolute;
+			top: 25px;
+			right: 230px;
+
+			span{
+				color: $spanColor;
+			}
+		}
+
+		input{
+			padding: 5px 20px;
+			margin: 5px 10px;
+			outline: transparent;
+			border: 1px solid $textColor;
+			background-color: transparent;
+
+			&:focus{
+				border-radius: 3px;
+				outline: 1px solid #000;
+			}
+		}
+		.btn{
+			cursor: pointer;
+			outline: none;
+			padding: 5px 10px;
+			background-color: $textColor;
+		}
+	}
+}

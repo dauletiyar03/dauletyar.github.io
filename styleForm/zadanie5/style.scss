@@ -1,0 +1,71 @@
+@import "_variables.scss";
+@import "_nullstyle.scss";
+@import "_sample.scss";
+
+body{
+	background: rgb(237, 239, 252);
+}
+
+
+.container{
+	max-width: 250px;
+	font-family: $ff;
+	color: $colorText;
+	margin: 100px auto;
+	border-radius: 10px;
+	background-color: $bgcnt;
+	overflow: hidden;
+	padding: 20px 0 50px 0px;
+
+	&__title{
+		padding: 20px 0;
+		text-align: center;
+		font-size: $fz;
+	}
+	&__form_item{
+		position: relative;
+		padding-top: 20px;
+		@extend %indent;
+	}
+	.form_label{
+		position: absolute;
+		padding-top: 20px;
+		left: 5px;
+		top: 5px;
+		transition: top 0.3s linear;
+		z-index: 1;
+		font-size: 14px;
+	}
+	input{
+		display: block;
+		width: 100%;
+		padding: 5px;
+		color: $colorText;
+		background-color: $bgcnt;
+
+		&:focus+.form_label,
+		&:not(:placeholder-shown)+.form_label{
+			top: -15px;
+			color: blue;
+		}
+	}
+	::placeholder{
+		opacity: 0;
+	}
+	input:focus::placeholder{
+		transition: all 0.5s linear;
+		opacity: 1;
+	}
+	&__form_item:last-child{
+		border:none;
+	}
+	.btn{
+		padding: 10px;
+		border: 1px solid $borderColor;
+		width: 100%;
+		cursor: pointer;
+		background-color: $bgcnt;
+		color: $colorText;
+		text-align: center;
+	}
+}

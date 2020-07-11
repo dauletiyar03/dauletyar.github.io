@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.container__form_item {
+  margin: 10px 30px;
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+}
+
+body {
+  background: #edeffc;
+}
+
+.container {
+  max-width: 250px;
+  font-family: arial;
+  color: #fff;
+  margin: 100px auto;
+  border-radius: 10px;
+  background-color: #2c3034;
+  overflow: hidden;
+  padding: 20px 0 50px 0px;
+}
+.container__title {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+}
+.container__form_item {
+  position: relative;
+  padding-top: 20px;
+}
+.container .form_label {
+  position: absolute;
+  padding-top: 20px;
+  left: 5px;
+  top: 5px;
+  transition: top 0.3s linear;
+  z-index: 1;
+  font-size: 14px;
+}
+.container input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  color: #fff;
+  background-color: #2c3034;
+}
+.container input:focus + .form_label, .container input:not(:placeholder-shown) + .form_label {
+  top: -15px;
+  color: blue;
+}
+.container ::placeholder {
+  opacity: 0;
+}
+.container input:focus::placeholder {
+  transition: all 0.5s linear;
+  opacity: 1;
+}
+.container__form_item:last-child {
+  border: none;
+}
+.container .btn {
+  padding: 10px;
+  border: 1px solid #7ba2c1;
+  width: 100%;
+  cursor: pointer;
+  background-color: #2c3034;
+  color: #fff;
+  text-align: center;
+}

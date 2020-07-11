@@ -1,0 +1,162 @@
+@import "variables.scss";
+@import "nullstyle.scss";
+@import "_sample.scss";
+
+body{
+	background: #172945;
+}
+
+
+.container{
+	max-width: 280px;
+	font-family: $ff;
+	color: $colorText;
+	margin: 100px auto;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 10px $bgcnt;
+	background-color: $bgcnt;
+	overflow: hidden;
+
+	&__title{
+		padding: 20px 0;
+		text-align: center;
+		font-size: $fz;
+	}
+	.form__item{
+		position: relative;
+		padding-top: 20px;
+		@extend %indent;
+	}
+	.form_label{
+		position: absolute;
+		padding-top: 20px;
+		left: 5px;
+		top: 5px;
+		transition: top 0.3s linear;
+		z-index: 1;
+	}
+	input{
+		display: block;
+		width: 100%;
+		padding: 5px;
+		color: $colorText;
+		background-color: $bgcnt;
+
+		&:focus+.form_label,
+		&:not(:placeholder-shown)+.form_label{
+			top: -15px;
+			color: blue;
+		}
+	}
+	::placeholder{
+		opacity: 0;
+	}
+	input:focus::placeholder{
+		transition: all 0.5s linear;
+		opacity: 1;
+	}
+	.form__item:last-child{
+		@extend %indent;
+		margin: 30px 20px;
+		border: none;
+		border-radius: 5px;
+		padding: 0;
+		width: 82px;
+		overflow: hidden;
+		
+		&:hover{
+			box-shadow: 0 0 24px 2px rgb(4, 231, 248);
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(40px);
+			animation: moveBorder-Y 3s linear 3.5s infinite;
+			background: linear-gradient(to bottom, rgb(39, 197, 198), rgb(24, 90, 104)) no-repeat;
+			width: 2px;
+			height: 70px;
+		}
+		@keyframes moveBorder-Y{
+			0%{
+				transform: translateY(100px);
+			}
+			100%{
+				transform: translateY(-100px);
+			}
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(-100px);
+			animation: moveBorderY 3s linear 2.2s infinite;
+			background: linear-gradient(to bottom, rgb(24, 90, 104), rgb(39, 197, 198)) no-repeat;
+			width: 2px;
+			height: 70px;
+		}
+		@keyframes moveBorderY{
+			0%{
+				transform: translateY(-100px);
+			}
+			100%{
+				transform: translateY(100px);
+			}
+		}
+
+		.btn{
+			background-color: $bgcnt;
+			cursor: pointer;
+			letter-spacing: 2px;
+			padding: 10px 10px;
+			color: $btncolor;
+			text-align: center;
+			
+		&:hover{
+			box-shadow: inset 0 0 200px rgb(4, 231, 248);
+			color: $colorText;
+		}
+			
+			&::before{
+				content: '';
+				animation: moveBorder-X 3s linear 3s infinite;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translateX(100px);
+				background: linear-gradient(to right, rgb(39, 197, 198), rgb(24, 90, 104)) no-repeat;
+				width: 70px;
+				height: 2px;
+			}
+			@keyframes moveBorder-X{
+				0%{
+					transform: translateX(100px);
+				}
+				100%{
+					transform: translateX(-100px);
+				}
+			}
+			&::after{
+				content: '';
+				animation: moveBorderX 3s linear 1s infinite;
+				position: absolute;
+				top: 0px;
+				left: 0;
+				background: linear-gradient(to left, rgb(39, 197, 198), rgb(24, 90, 104)) no-repeat;
+				width: 70px;
+				height: 2px;
+			}
+			@keyframes moveBorderX{
+				0%{
+					transform: translateX(-100px);
+				}
+				100%{
+					transform: translateX(100px);
+				}
+			}
+		}
+	}
+
+}

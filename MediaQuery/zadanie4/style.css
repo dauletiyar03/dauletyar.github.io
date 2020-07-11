@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, minmax(250px, auto));
+  grid-gap: 20px;
+  grid-template-areas: "header header header navbar" "image1 image2 image3 navbar" "article article callout ." "content content content ." "footer footer footer .";
+}
+.container .item {
+  background-color: #ccc;
+}
+.container .item:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  background-color: #80ffd6;
+  grid-area: header;
+}
+.container .item:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 7;
+  background-color: lightsalmon;
+  grid-area: navbar;
+}
+.container .item:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  background-color: #89cdfc;
+  grid-area: image1;
+}
+.container .item:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  background-color: #8fee92;
+  grid-area: image2;
+}
+.container .item:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  background-color: #77889a;
+  grid-area: image3;
+}
+.container .item:nth-child(6) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  background-color: #21b2ab;
+  grid-area: article;
+}
+.container .item:nth-child(7) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+  background-color: #fffee0;
+  grid-area: callout;
+}
+.container .item:nth-child(8) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  background-color: #f18180;
+  grid-area: content;
+}
+.container .item:nth-child(9) {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  background-color: #e0feff;
+  grid-area: footer;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "header header navbar" "image1 image2 navbar" "image3 article callout" "content content content" "footer footer footer";
+  }
+  .container .item:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .container .item:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+  }
+  .container .item:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .container .item:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .container .item:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .container .item:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  .container .item:nth-child(7) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .container .item:nth-child(8) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+  .container .item:nth-child(9) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "image1 image2" "navbar image3" "article callout" "content content" "footer footer";
+  }
+  .container .item:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .container .item:nth-child(2) {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  .container .item:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .container .item:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .container .item:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .container .item:nth-child(6) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .container .item:nth-child(7) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .container .item:nth-child(8) {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .container .item:nth-child(9) {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}

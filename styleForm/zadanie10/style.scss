@@ -1,0 +1,74 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+.container{
+	max-width: 430px;
+	padding: 50px 80px;
+	margin: 100px auto;
+	background-color: $cntcolor;
+	&__form{
+		padding: 60px 30px;
+		background-color: $formcolor;
+		position: relative;
+
+		&_title{
+		display: flex;
+		}
+
+		&_item{
+			font-size: $fz;
+			font-family: $ff;
+			color: #fff;
+			margin-right: 10px;
+			max-width: 70px;
+		}
+
+		&_registr{
+			display: flex;
+			flex-direction: column;
+		}
+		
+		label{
+			color: #999;
+			margin-bottom: 10px;
+			font-size: 14px;
+			
+			:last-of-type{
+				color: #fff;
+			}
+		}
+
+		input{
+			background-color: $inputcolor;
+			padding: 5px 30px 5px 10px;
+			border-radius: 15px;
+			color: #fff;
+		}
+
+		.btn{
+			cursor: pointer;
+			border-radius: 15px;
+			padding: 5px;
+			color: #fff;
+			background-color: $btncolor;
+			margin-bottom: 50px;
+		}
+
+		&:after{
+			content:'';
+			position: absolute;
+			bottom: 100px;
+			left: 30px;
+			width: 210px;
+			height: 1px;
+			background-color: $linecolor;
+		}
+
+		&_footer{
+			cursor: pointer;
+			text-align: center;
+			font-size: 12px;
+			color: #999;
+		}
+	}
+}

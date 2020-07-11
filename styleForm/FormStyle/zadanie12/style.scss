@@ -1,0 +1,35 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+body{
+	background-color: $bgcolor;
+}
+
+.container{
+	max-width: 200px;
+	margin: 100px auto;
+
+	&__form{
+		display: flex;
+		flex-direction: column;
+		
+		&_title{
+			text-align: center;
+			font-size: 24px;
+			color: #fff;
+			font-family: Arial;
+		}
+		input, .btn{
+			padding: 8px;
+			border-radius: 3px;
+			color: #fff;
+			background-color: $inputcolor;
+			margin: 10px;
+		}
+		.btn{
+			background-color: $btncolor;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+}

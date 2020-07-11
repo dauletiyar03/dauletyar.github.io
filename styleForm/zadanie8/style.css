@@ -1,0 +1,51 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.authorization {
+  position: relative;
+}
+.authorization img {
+  width: 100%;
+  filter: blur(3px);
+}
+.authorization__form {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.authorization__form_title {
+  font-size: 24px;
+  font-family: Arial;
+  color: #fff;
+  position: absolute;
+  top: 25px;
+  right: 230px;
+}
+.authorization__form_title span {
+  color: #5b74f5;
+}
+.authorization__form input {
+  padding: 5px 20px;
+  margin: 5px 10px;
+  outline: transparent;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+.authorization__form input:focus {
+  border-radius: 3px;
+  outline: 1px solid #000;
+}
+.authorization__form .btn {
+  cursor: pointer;
+  outline: none;
+  padding: 5px 10px;
+  background-color: #fff;
+}
