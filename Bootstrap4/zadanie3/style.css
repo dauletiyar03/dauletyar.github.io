@@ -1,0 +1,86 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg-color {
+  background-color: #777;
+}
+.bg-color .carousel-info {
+  padding: 80px;
+  position: relative;
+}
+.bg-color .carousel_sliderInfo {
+  padding: 50px 150px 0 150px;
+}
+.bg-color .slider_title {
+  color: #fff;
+  font-size: 25px;
+  padding: 0 0 10px 0;
+}
+.bg-color .slider_text {
+  color: #e3e3e3;
+  font-size: 14px;
+  padding: 0 0 10px 0;
+}
+.bg-color .slider_btn {
+  background-color: #0081ff;
+  max-width: 120px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.bg-color .slider_btn a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #e3e3e3;
+}
+
+.info_row {
+  margin: 40px auto;
+  max-width: 900px;
+}
+.info_row .item {
+  text-align: center;
+  padding: 0 20px;
+}
+.info_row .item .item_circle {
+  margin: 0 auto;
+  max-width: 90px;
+  max-height: 90px;
+  border-radius: 50%;
+  background-color: #777;
+}
+.info_row .item .item_title {
+  font-size: 20px;
+  color: #868686;
+  padding: 5px;
+}
+.info_row .item .item_text {
+  font-size: 13px;
+  color: #999;
+  padding: 0 0 10px 0;
+}
+.info_row .item .item_btn {
+  background-color: #6e727c;
+  max-width: 90px;
+  font-size: 12px;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+}
+.info_row .item .item_btn:after {
+  content: "»";
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  color: #e3e3e3;
+}
+.info_row .item .item_btn a {
+  display: block;
+  padding: 8px 15px 8px 5px;
+  color: #e3e3e3;
+}

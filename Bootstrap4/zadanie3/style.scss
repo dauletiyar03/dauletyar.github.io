@@ -1,0 +1,85 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.bg-color{
+   background-color: $bgcolor;
+
+   .carousel-info{
+      padding: 80px;
+      position: relative;
+   }
+   .carousel_sliderInfo{
+      @include paddingMargin(50px 150px 0 150px);
+   }
+   .slider_title {
+      color: $titlecolor;
+      font-size: 25px;
+      @include paddingMargin(0 0 10px 0);
+   }
+   .slider_text {
+      color: $textcolor;
+      font-size: 14px;
+      @include paddingMargin(0 0 10px 0);
+   }
+   .slider_btn {
+      background-color: $sliderbtncolor;
+      max-width: 120px;
+      font-size: 14px;
+      border-radius: 5px;
+      a{
+         display: block;
+         padding: 10px;
+         text-align: center;
+         color: $textcolor;
+      }
+   }   
+}
+.info_row {
+   margin: 40px auto;
+   max-width: 900px;
+
+   .item {
+      text-align: center;
+      padding: 0 20px;
+      
+      .item_circle {
+         margin: 0 auto;
+         max-width: 90px;
+         max-height: 90px;
+         border-radius: 50%;
+         background-color: $bgcolor;
+      }
+      .item_title {
+         font-size: 20px;
+         color: $itemtitlecolor;
+         @include paddingMargin(5px);;
+      }
+      .item_text {
+         font-size: 13px;
+         color: $itemtextcolor;
+         @include paddingMargin(0 0 10px 0);
+      }
+      .item_btn {
+         background-color: #6e727c;
+         max-width: 90px;
+         font-size: 12px;
+         margin: 0 auto;
+         border-radius: 5px;
+         position: relative;
+      }
+      .item_btn:after{
+         content: '\00BB';
+         display: block;
+         position: absolute;
+         top: 8px;
+         right: 5px;
+         color: $textcolor;
+      }
+      .item_btn a{
+         display: block;
+         padding: 8px 15px 8px 5px;
+         color: $textcolor;
+      }
+   }
+}
