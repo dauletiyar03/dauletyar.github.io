@@ -1,0 +1,69 @@
+@import "_reset.scss";
+// @import "_variables.scss";
+
+
+.banner{
+   background: url(images/images1.jpg) center no-repeat;
+   background-size: cover;
+   height: 100vh;
+
+   .nav-items{
+      opacity: 0.5; 
+   }
+
+   .collapse_items{
+      ul{
+         li{
+            text-align: center;
+         }
+      }
+   }
+   &__title{
+      padding-top: 420px;
+      text-align: center;
+      font-size: 3em;
+      color: #999;
+      font-weight: 700;
+   }
+   &__content{
+      text-align: center;
+      padding: 0 20px;
+      display: block;
+      color: #fff;
+   }
+}
+.about{
+   background-color: orange;
+   height: 50vh;
+
+   &__title{
+      text-align:center;
+      padding-top: 50px;
+      font-size: 3em;
+      color: #fff;
+      font-weight: 700;
+      position: relative;
+
+      &:after{
+         content: '';
+         position: absolute;
+         bottom: .1em;
+         left: 1.8em;
+         width: 5vw;
+         height: .3vh;
+         background-color: #999;
+      }
+   }
+   &__content{
+      color:#fff;
+      text-align: center;
+   }
+   &__footer{
+      text-align:center;
+      color: #fff;
+   }
+   &__btn{
+      padding: 5px 30px;
+      background-color: transparent;
+   }
+}

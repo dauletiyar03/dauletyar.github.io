@@ -27,6 +27,7 @@
       max-width: 120px;
       font-size: 14px;
       border-radius: 5px;
+
       a{
          display: block;
          padding: 10px;
@@ -41,45 +42,47 @@
 
    .item {
       text-align: center;
-      padding: 0 20px;
-      
-      .item_circle {
+      padding: 10px 20px;
+
+      &_circle {
          margin: 0 auto;
-         max-width: 90px;
-         max-height: 90px;
+         width: 90px;
+         height: 90px;
          border-radius: 50%;
          background-color: $bgcolor;
       }
-      .item_title {
+      &_title {
          font-size: 20px;
          color: $itemtitlecolor;
-         @include paddingMargin(5px);;
+         @include paddingMargin(5px);
       }
-      .item_text {
+      &_text {
          font-size: 13px;
          color: $itemtextcolor;
          @include paddingMargin(0 0 10px 0);
       }
-      .item_btn {
-         background-color: #6e727c;
+      &_btn {
+         background-color: $itembntcolor;
          max-width: 90px;
          font-size: 12px;
          margin: 0 auto;
          border-radius: 5px;
          position: relative;
-      }
-      .item_btn:after{
-         content: '\00BB';
-         display: block;
-         position: absolute;
-         top: 8px;
-         right: 5px;
-         color: $textcolor;
-      }
-      .item_btn a{
+
+         &:after{
+            content: '\00BB';
+            display: block;
+            position: absolute;
+            top: 8px;
+            right: 5px;
+            color: $textcolor;
+         }
+
+         a {
          display: block;
          padding: 8px 15px 8px 5px;
          color: $textcolor;
+         }
       }
    }
 }

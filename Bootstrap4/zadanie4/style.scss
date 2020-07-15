@@ -1,0 +1,77 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+
+.jumbatron_text{
+   font-size: 12px;
+}
+.jumbatron__btn {
+	max-width: 115px;
+	position: relative;
+
+   &:after{
+      content: '\00BB';
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #f9ffff;
+   }
+   a{
+      border-radius: 5px;
+      background-color: #0081ff;
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+      color: #fff;
+   }
+}
+
+.car-details {
+   margin: 40px auto;
+   padding: 20px;
+   border-bottom: 2px solid rgb(233, 233, 233);
+   
+   &__title {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0 0 10px 0;
+   }
+   &__text {
+      line-height: 18px;
+      padding: 0 10px 10px 0;
+   }
+   &__btn {
+      background-color: #6e727c;
+      max-width: 85px;
+      font-size: 12px;
+      border-radius: 5px;
+      position: relative;
+
+      &:after{
+         content: '\00BB';
+         display: block;
+         position: absolute;
+         top: 8px;
+         right: 8px;
+         color: #f9ffff;
+      }
+      a{
+         color: #fff;
+         padding: 8px 12px 8px 5px;
+         display: block;
+      }
+   }
+} 
+.footer_text {
+	font-size: 12px;
+	position: relative;
+}
+.footer__item:before {
+	content: '\00A9';
+	display: block;
+	position: absolute;
+	top: 1px;
+	font-size: 12px;
+	left: -15px;
+}

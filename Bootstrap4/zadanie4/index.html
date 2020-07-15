@@ -4,67 +4,94 @@
 	<meta charset="UTF-8">
 	<title>Document4</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="nullstyle.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
-	<div class="wrapper">
-		<div class="navigation-bar">
-			<nav class="navigation-bar__items">
-				<ul>
-					<li class="navigation-bar__item"><a class="navigation-bar_title" href="#">Navbar</a></li>
-					<li class="navigation-bar__item"><a class="navigation-bar_Home" href="#">Home</a></li>
-					<li class="navigation-bar__item"><a class="navigation-bar_link" href="#">Link</a></li>
-					<li class="navigation-bar__item"><a class="navigation-bar_link-disabled" href="#">Disabled</a></li>
-					<li class="navigation-bar__item"><a class="navigation-bar_link-dropdown" href="#">Dropdown</a></li>
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+					</li>
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+					</li>
 				</ul>
-			</nav>
-			<div class="search-form">
-				<form class="search-form__items" action="">
-					<input class="search-form__item" type="text" placeholder="Search">
-					<input class="search-form__item search-form_btn" type="submit" value="Search">
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>
-		</div>
-		<div class="banner">
-			<div class="banner__content">
-				<p class="banner__title">Hello, world!</p>
-				<p class="banner__text">This is a template for a simple marketing or informational website. it includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				<div class="banner__btn">
-					<a class="car-details_link" href="#">Learn more</a>
+		</nav> 
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container jumbatron_banner">
+			  <h1 class="display-4 jumbatron_title">Hello, world!</h1>
+			  <p class="lead jumbatron_text">This is a template for a simple marketing or informational website. it includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+			  <div class="jumbatron__btn">
+					<a href="#">Learn more</a>
 				</div>
 			</div>
 		</div>
-		<div class="car-details">
-			<div class="car-details__items">
-				<div class="car-details__item">
-					<div class="car-details__title">Heading</div>
-					<div class="car-details__text">Donec sed odio dui. Etiam porta sem malesuada magna mollis eulsmod. nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cusus magna.</div>
-					<div class="car-details__btn">
-						<a href="#">View details</a>
+			<div class="row justify-content-center car-details">
+				<div class="col-md-3 col-sm-6 col-12">
+					<div class="car-details__item">
+						<div class="car-details__title">Heading</div>
+						<div class="car-details__text">Donec sed odio dui. Etiam porta sem malesuada magna mollis eulsmod. nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cusus magna.</div>
+						<div class="car-details__btn">
+							<a href="#">View details</a>
+						</div>
 					</div>
 				</div>
-				<div class="car-details__item">
-					<div class="car-details__title">Heading</div>
-					<div class="car-details__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget licinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum, Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
-					<div class="car-details__btn">
-						<a href="#">View details</a>
+				<div class="col-md-3 col-sm-6 col-12">
+					<div class="car-details__item">
+						<div class="car-details__title">Heading</div>
+						<div class="car-details__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget licinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum, Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
+						<div class="car-details__btn">
+							<a href="#">View details</a>
+						</div>
 					</div>
 				</div>
-				<div class="car-details__item">
-					<div class="car-details__title">Heading</div>
-					<div class="car-details__text">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursis commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
-					<div class="car-details__btn">
-						<a href="#">View details</a>
+				<div class="col-md-3 col-sm-6 col-12">
+					<div class="car-details__item">
+						<div class="car-details__title">Heading</div>
+						<div class="car-details__text">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursis commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+						<div class="car-details__btn">
+							<a href="#">View details</a>
+						</div>
 					</div>
 				</div>
-			</div>
 		</div>
-		<footer class="footer">
-			<div class="footer__item">
-				<p class="footer_text">Company 2017-2019</p>
+		<footer class="row footer">
+			<div class="offset-md-2 col-md-6 offset-sm-2 col-sm-6 offset-2 col-12">
+				<div class="footer__item">
+					<p class="footer_text">Company 2017-2019</p>
+				</div>
 			</div>
 		</footer>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body>
 </html>
