@@ -1,7 +1,11 @@
 @import "_reset.scss";
 @import "_variables.scss";
 
-
+.navbar_wrap{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 .jumbatron_text{
    font-size: 12px;
 }

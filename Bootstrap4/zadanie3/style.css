@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+.navbar_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .bg-color {
   background-color: #777;
 }

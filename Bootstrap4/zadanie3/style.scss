@@ -2,9 +2,15 @@
 @import "_variables.scss";
 @import "_mixin.scss";
 
+
+.navbar_wrap{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 .bg-color{
    background-color: $bgcolor;
-
+   
    .carousel-info{
       padding: 80px;
       position: relative;
@@ -34,7 +40,7 @@
          text-align: center;
          color: $textcolor;
       }
-   }   
+   }
 }
 .info_row {
    margin: 40px auto;
