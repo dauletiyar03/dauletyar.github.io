@@ -1,0 +1,114 @@
+.footer{
+   background-color: #454545;
+   &__items{
+      display: flex;
+      padding: 110px 0 95px 0;
+
+      .about-airbooking{
+         width: 343px;
+         .about_title{
+            color: #c19b76;
+            text-transform: uppercase;
+            font-family: "BodoniSvty", serif;
+            font-size: 30px;
+            
+            &::first-letter{
+               font-size: 40px;
+            }
+         }
+         .about_text{
+            padding: 40px 0;
+            color: #cfcfcf;
+            font-family: 'OpenSans';
+            font-size: 16px;
+         }
+         .about-reg{
+            width: 223px;
+            color: #cfcfcf;
+            padding-bottom: 30px;
+            display: flex;
+            align-items: center;
+            &::before{
+               padding-right: 15px;
+               content: url(../icons/geo.png);
+            }
+         }
+         .about_tel{
+            width: 142px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before{
+               padding-right: 15px;
+               content: url(../icons/tel.png);
+            }
+            a{
+               display: block;
+               margin-top: 5px;
+               text-decoration: none;
+               color: #cfcfcf;
+               &:first-child{
+                  margin: 0;
+               }
+            }
+         }
+      }
+   }
+   .quick-links{
+      padding-left: 55px;
+   }
+   .quick_title{
+      font-size: 24px;
+      font-family: 'GildaDisplay', sans-serif;
+      color: #ffffff;
+   }
+   .quick_info{
+      padding-top: 50px;
+      display: flex;
+      .info_links{
+         display: flex;
+         flex-direction: column;
+         padding-right: 80px;
+      }
+      a{
+         text-decoration: none;
+         color: #cfcfcf;
+         font-family: "OpenSans", sans-serif;
+         line-height: 36px;
+
+         &:hover{
+            color: #c19b76;
+            transition: 0.4s;
+         }
+      }
+   }
+   .social_connect{
+      padding-left: 50px;
+      .social_title{
+         color: #ffffff;
+         font-family: 'GildaDisplay', sans-serif;
+         font-size: 24px;
+         padding-bottom: 50px;
+      }
+      .social_icons{
+         padding-top: 5px;
+         a{
+            margin-right: 20px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #cfcfcf;
+            transition: 0.3s;
+            @for $i from 1 through 5{
+               &:nth-child(#{$i}):hover{
+                  color: nth($color-icons, $i);
+               }
+            }
+         }
+      }
+   }
+   &-author{
+      padding-bottom: 80px;
+      color: #cfcfcf;
+      text-align: center;
+   }
+}

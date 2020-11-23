@@ -1,0 +1,45 @@
+@import "_fonts.scss";
+@import "_variables.scss";
+
+.wrapper{
+   .container{
+      margin: 0 auto;
+      max-width: 1171px;
+   }
+}
+
+@import "header-page"; 
+@import "media-queries/header-page320";
+
+@import "room-slider";
+@import "media-queries/room-slider320";
+
+@import "best-room";
+@import "media-queries/best-room320";
+
+@import "our-services";
+@import "media-queries/our-services320";
+
+@import "find-room";
+@import "media-queries/find-room320";
+
+@import "guest-slider";
+@import "media-queries/guest-slider320";
+
+@import "_video.scss";
+@import "media-queries/video320";
+
+@import "_news.scss";
+@import "media-queries/news320";
+
+@import "_footer.scss";
+@import "media-queries/footer320";
+
+@media only screen and (max-width: 576px){
+   .wrapper{
+      .container{
+         padding: 0 15px;
+         max-width: 560px;
+      }
+   }
+}

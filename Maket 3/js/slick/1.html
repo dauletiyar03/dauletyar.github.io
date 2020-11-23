@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="slick.css">
+    <!-- <link rel="stylesheet" href="slick-theme.css"> -->
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        img,
+        div {
+            width: 500px;
+            height: 300px;
+        }
+
+        * {
+            outline: none;
+        }
+
+        .slick-arrow{
+            padding: 20px;
+        }
+
+        .slick-next, .slick-prev{
+            border: 3px solid red;
+        }
+
+        .myslider{
+            position: relative;
+            margin: 100px auto;
+        }
+
+        .slick-next{
+            position: absolute;
+            top: 50%;
+        }
+
+        .slick-prev{
+            position: absolute;
+            right: 0;
+             
+          
+        }   
+
+        .slick-dots{
+            list-style-type: none;
+           ;
+        }
+
+        li{
+            display: inline-block
+        }
+    </style>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-3.1.0.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+
+    <div class="myslider">
+        <div><img src="../img/1.jpg" alt=""></div>
+        <div><img src="../img/2.jpg" alt=""></div>
+        <div><img src="../img/3.jpg" alt=""></div>
+        <div><img src="../img/1.jpg" alt=""></div>
+        <div><img src="../img/2.jpg" alt=""></div>
+        <div><img src="../img/3.jpg" alt=""></div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.myslider').slick({
+
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+               
+
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

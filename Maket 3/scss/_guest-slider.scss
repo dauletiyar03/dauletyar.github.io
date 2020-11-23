@@ -1,0 +1,40 @@
+.guest__slider{
+   outline: none;
+   .guest_title{
+      color: $titleColor;
+      text-align: center;
+      font-family: "GildaDisplay", sans-serif;
+      font-size: 72px;
+      margin-bottom: 90px;
+   }
+   .guest_text{
+      width: 665px;
+      box-shadow: 0 0 35px $shadowColor;
+      font-family: "OpenSans", sans-serif;
+      font-size: 17px;
+      line-height: 35px;
+      margin: 0 auto;
+      padding: 45px;
+   }
+   .about-author{
+      padding: 51px 0 81px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .author_photo{
+      padding-right: 24px;
+   }
+   .author-name{
+      text-transform: uppercase;
+      font-size: 25px;
+      color: #7d7d7d;
+   }
+   .author-reg{
+      color: #7d7d7d;
+      font-size: 16px;
+   }
+   .slick-slide{
+      outline: none;
+   }
+}
