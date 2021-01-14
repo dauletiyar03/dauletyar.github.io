@@ -1,0 +1,95 @@
+@media screen and (min-width: 960px){
+   .header__info{
+      @include flexbox(row);
+      &-items{
+         &:nth-child(1){
+            justify-content: start;
+            a{
+               padding-right: 30px;
+            }
+         }
+      }
+   }
+   .header__inner{
+      overflow-x: hidden;
+      position: relative;
+      @include flexbox(null, null, center);
+      .hamburger__menu{
+         display: none;
+      }
+      .logo{
+         padding: 30px 0;
+      }
+      .hamburgerInput{
+         display: none;
+      }
+      .menu{
+         margin-left: auto;
+         background: none;
+         position: static;
+         top: auto;
+         right: auto;
+         &__list{
+            min-height: auto;
+            @include flexbox(row, space-evenly);
+            &-item{
+               padding-right: 35px;
+               &:last-child{
+                  padding: 0;
+               }
+            }
+            a{
+               color: $colorNavMenu;
+               font-family: "OpenSansBold";
+               font-size: 14px;
+               text-transform: uppercase;
+               position: relative;
+               &::before, &::after{
+                  content: '';
+                  width: 5px;
+                  height: 10px;
+                  background-color: $colorHoverNavMenu;
+                  position: absolute;
+                  top: 5px;
+                  display: none;
+               }
+               &::before{
+                  left: -15px;
+               }
+               &::after{
+                  right: -15px;
+               }
+               &:hover::before, &:hover::after{
+                  display: block;
+               }
+               &:hover{
+                  color: $colorHoverNavMenu;
+               }
+            }
+         }
+      }
+      .search{
+         padding: 0 0 0 25px;
+         #checkbox-id1{
+            appearance: none;
+         }
+         &-inputText{
+            width: 660px;
+            border: 1px solid $borderColorInput;
+            padding: 2px 6px;
+            right: -100vw;
+            transition: 0.5s;
+            position: absolute;
+            z-index: 43;
+         }
+         &-inputCheck:checked + .search-inputText{
+            display: block;
+            top: 40px;
+            right: 40px;
+         }
+         .fas{
+            cursor: pointer;
+         }
+      }
+   }
+}

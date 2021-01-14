@@ -1,0 +1,151 @@
+.header{
+   &__top{
+      background-color: $bgColorHeader;
+   }
+   &__info{
+      @include flexbox(column);
+      &-items{
+         font-size: 14px;
+         padding: 15px 0;
+         @include flexbox(null, space-evenly);
+         flex: 1;
+         a{
+            @include flexbox(null, null, center);
+            color: $colorHeaderInfoLink;
+            .fas, .far{
+               padding: 0 5px;
+            }
+         }
+         &:nth-child(2){
+            .info-menu{
+               flex: 1;
+               &_reg{
+                  display: none;
+               }
+               label{
+                  color: #fff;
+                  cursor: pointer;
+                  .fas{
+                     padding: 0 5px 0 0;
+                  }
+               }
+               .authorization{
+                  background-color: rgba(0, 0, 0, 0.8);
+                  position: absolute;
+                  top: -100vh;
+                  left: 50%;
+                  transition: 0.8s;
+                  transform: scale(0.8);
+               }
+               &_reg:checked ~ .authorization{
+                  top: 100px;
+                  transform: scale(1.4);
+               }
+               &__items{
+                  font-size: 12px;
+                  @include flexbox(null, space-between);
+               }
+            }
+         }
+      }
+   }
+   &__inner{
+      @include flexbox(null, space-between, center);
+      .logo{
+         padding: 15px 0;
+      }
+      .hamburgerInput{
+         appearance: none;
+      }
+      .hamburger__menu{
+         cursor: pointer;
+         padding: 7.5px 10.5px;
+         position: absolute;
+         top: 16px;
+         right: 20px;
+         z-index: 13;
+         &::before{
+            content: '';
+            width: 21px;
+            height: 3px;
+            border-radius: 5px;
+            background-color: $colorHeaderInfoLink;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         span{
+            &::before, &::after{
+               content: '';
+               width: 21px;
+               height: 3px;
+               border-radius: 5px;
+               background-color: $colorHeaderInfoLink;
+               position: absolute;
+               left: 0;
+            }
+            &::before{
+               top: 6px;
+            }
+            &::after{
+               bottom: 0px;
+            }
+         }
+      }
+      .hamburgerInput:checked ~ .menu{
+         right: 0;
+      }
+      .menu{
+         background-color: rgba(0, 0, 0, 0.9);
+         position: absolute;
+         top: 0;
+         right: -100vw;
+         transition: 0.5s;
+         z-index: 12;
+         &__list{
+            min-width: 300px;
+            min-height: 100vh;
+            @include flexbox(column, space-evenly, center);
+         }
+         a{
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            &::before, &::after{
+               content: '';
+               width: 5px;
+               height: 15px;
+               background-color: $colorHoverNavMenu;
+               position: absolute;
+               top: 2px;
+               display: none;
+            }
+            &::before{
+               left: -15px;
+            }
+            &::after{
+               right: -15px;
+            }
+            &:hover::before, &:hover::after{
+               display: block;
+            }
+            &:hover{
+               color: $colorHoverNavMenu;
+            }
+         }
+      }
+      .search{
+         display: block;
+         &-inputCheck{
+            appearance: none;
+         }
+         &-inputText{
+            width: 140px;
+            padding: 3px 8px;
+         }
+         .fas{
+            margin-left: 5px;
+         }
+      }
+   }
+}

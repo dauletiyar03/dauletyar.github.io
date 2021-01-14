@@ -1,0 +1,76 @@
+.teachers{
+   margin-bottom: 100px;
+   &__items{
+      @include flexbox(null, center, center);
+   }
+   &_item{
+      color: #ffffff;
+      font-family: "OpenSans", sans-serif;
+      text-align: center;
+      position: relative;
+      @include flexbox(null, center, center);
+   }
+   &_hov{
+      @include flexbox(column, null, center);
+      width: 286px;
+      height: 145px;
+      background-color: $colorHov;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(145px);
+      transition: 0.5s;
+      .hov_title{
+         padding: 10px 0 10px 0;
+         p:first-child{
+            font-size: 20px;
+            padding-bottom: 6px;
+         }
+      }
+      .hov_icons{
+         @include flexbox(null, center, center);
+      }
+      span{
+         padding: 5px;
+         a{
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            @include flexbox(null, center, center);
+            text-decoration: none;
+            font-size: 24px;
+
+            &:hover{
+               background-color: #ffffff;
+               color: $colorOrange;
+            }
+         }
+      }
+   }
+   &_item:hover &_hov{
+      transform: translateY(0);
+   }
+   .slick-initialized .slick-slide{
+      @include flexbox(null, center, center);
+   }
+   .slick-dots{
+      position: absolute;
+      top: -30px;
+      display: flex;
+      li{
+         list-style-type: none;
+         width: 20px;
+         height: 3px;
+         background-color: $colorTitle;
+         cursor: pointer;
+         button{
+            display: none;
+         }
+      }
+      .slick-active{
+         background-color: $colorHoverNavMenu;  
+      }
+   }
+}

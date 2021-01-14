@@ -1,0 +1,90 @@
+.gallery{
+   &__tabs{
+      text-align: center;
+      .tabs_input{
+         display: none;
+      }
+      .tabs_label{
+         border: 1px solid $borderColorInput;
+         border-radius: 3px;
+         color: $colorTitle;
+         display: inline-block;
+         font-family: "RobotoRegular";
+         text-transform: uppercase;
+         font-size: 16px;
+         padding: 3px 12px;
+         margin: 4px;
+         letter-spacing: -0.32px;
+         cursor: pointer;
+      }
+      .tabs_input:checked + .tabs_label{
+         color: #fff;
+         background-color: $colorOrange;
+         border-color: $colorOrange;
+      }
+      .tabs_input:nth-child(3):checked ~ .tabs__items>.item_img:nth-child(2),
+      .tabs_input:nth-child(3):checked ~ .tabs__items>.item_img:nth-child(5),
+      .tabs_input:nth-child(3):checked ~ .tabs__items>.item_img:nth-child(8){
+         display: none;
+      }
+      .tabs_input:nth-child(5):checked ~ .tabs__items>.item_img:nth-child(1),
+      .tabs_input:nth-child(5):checked ~ .tabs__items>.item_img:nth-child(4),
+      .tabs_input:nth-child(5):checked ~ .tabs__items>.item_img:nth-child(7){
+         display: none;
+      }
+      .tabs_input:nth-child(7):checked ~ .tabs__items>.item_img:nth-child(3),
+      .tabs_input:nth-child(7):checked ~ .tabs__items>.item_img:nth-child(6),
+      .tabs_input:nth-child(7):checked ~ .tabs__items>.item_img:nth-child(4){
+         display: none;
+      }
+      .tabs_input:nth-child(9):checked ~ .tabs__items>.item_img:nth-child(1),
+      .tabs_input:nth-child(9):checked ~ .tabs__items>.item_img:nth-child(3),
+      .tabs_input:nth-child(9):checked ~ .tabs__items>.item_img:nth-child(8){
+         display: none;
+      }
+   }
+   .item_img{
+      position: relative;
+   }
+   .item-hov{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.3s;
+      @include flexbox(null, center, center);
+      
+      span{
+         padding: 5px;
+         margin: 2px;
+         border: 1px solid #fff;
+         cursor: pointer;
+         opacity: 0;
+         transition: 0.3s;
+         
+         &:hover{
+            background-color: $colorOrange;
+         }
+      }
+      .fas, .far{
+         color: rgb(255, 255, 255);
+         font-size: 30px;
+         opacity: 1;
+      }
+   }
+   .item_img:hover .item-hov{
+      background-color: rgba(50,50,50,.5);
+   }
+   .item_img:hover span{
+      opacity: 1;
+   }
+   .tabs__items{
+      margin: 50px 0;
+      @include flexbox(null, center);
+      flex-wrap: wrap;
+      .item_img{
+         overflow: hidden;
+      }
+   }
+}

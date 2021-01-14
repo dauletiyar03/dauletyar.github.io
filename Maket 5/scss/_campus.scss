@@ -1,0 +1,73 @@
+.campus{
+   background-color: $bgColorCampus;
+   padding-bottom: 100px;
+   &__items{
+      @include flexbox(null, center, center);
+   }
+   &_item{
+      // max-width: 259px;
+      height: 153px;
+      background-color: #ffffff;
+      padding: 7px 25px;
+      cursor: pointer;
+      margin-right: 30px;
+      position: relative;
+      overflow: hidden;
+      &:last-child{
+         margin-right: 0;
+      }
+      .item_hov{
+         span{
+            background-color: rgba(0, 0, 2, .6);
+            width: calc(50% - 1px);
+            height: calc(50% - 1px);
+            position: absolute;
+            transition: 0.3s;
+            &:nth-child(1){
+               transform: translate(-80px, -80px);
+               top: 0;
+               left: 0;
+            }
+            &:nth-child(2){
+               transform: translate(80px, -80px);
+               top: 0;
+               right: 0;
+            }
+            &:nth-child(3){
+               transform: translate(-80px, 80px);
+               bottom: 0;
+               left: 0;
+            }
+            &:nth-child(4){
+               transform: translate(80px, 80px);
+               bottom: 0;
+               right: 0;
+            }
+         }
+      }
+      &:hover .item_hov>span{
+         transform: translate(0);
+      }
+   }
+   .slick-initialized .slick-slide{
+      @include flexbox(null, center, center);
+   }
+   .slick-dots{
+      position: absolute;
+      top: -30px;
+      display: flex;
+      li{
+         list-style-type: none;
+         width: 20px;
+         height: 3px;
+         background-color: $colorTitle;
+         cursor: pointer;
+         button{
+            display: none;
+         }
+      }
+      .slick-active{
+         background-color: $colorHoverNavMenu;  
+      }
+   }
+}

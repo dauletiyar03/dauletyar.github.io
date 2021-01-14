@@ -1,0 +1,45 @@
+@import "_reset.scss";
+@import "mixins";
+@import "variables";
+@import "fonts";
+body{
+   overflow-x: hidden;
+}
+.wrapper{
+   min-width: 320px;
+   margin: 0 auto;
+   .container{
+      padding: 0 20px;
+   }
+}
+@media screen and (min-width: 960px){
+   .container{
+      max-width: 1180px;
+      padding: 0 15px;
+      margin: 0 auto;
+   }
+}
+
+@import "header";
+@import "mediaqueries/header960";
+
+@import "banner";
+@import "mediaqueries/banner960";
+
+@import "about";
+@import "mediaqueries/about960";
+
+@import "course";
+@import "mediaqueries/course960";
+
+@import "gallery";
+@import "mediaqueries/gallery960";
+
+@import "video";
+@import "mediaqueries/video960";
+
+@import "teachers";
+@import "mediaqueries/teachers960";
+
+@import "campus";
+@import "mediaqueries/campus960";

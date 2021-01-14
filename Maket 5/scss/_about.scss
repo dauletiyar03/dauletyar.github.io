@@ -1,0 +1,76 @@
+.title{
+   @include flexbox(null, center);
+   color: $colorTitle;
+   font-size: 30px;
+   font-family: "RobotoSlabBold";
+   padding: 50px 0;
+   text-transform: uppercase;
+}
+.about{
+   padding: 0 0 50px 0;
+   &-content{
+      @include flexbox(column, center, center);
+   }
+   &__tabs{
+      width: 100%;
+      @include flexbox(null, center, center);
+      position: relative;
+   }
+   &__items{
+      @include flexbox(null, center, center);
+   }
+   &-item{
+      @include flexbox(column, center, center);
+      text-align: center;
+      margin: 0 18px;
+      .item_title{
+         text-transform: uppercase;
+         font-family: "OpenSansBold";
+         font-size: 16px;
+         padding: 15px 0 15px 0;
+      }
+      .item_text{
+         font-family: "OpenSansLight";
+         font-size: 14px;
+         color: $colorTitle;
+      }
+      span{
+         @include flexbox(null, center, center);
+         width: 120px;
+         height: 120px;
+         border: 2px solid $colorTitle;
+         border-radius: 50%;
+         i{
+            color: $colorTitle;
+            font-size: 50px;
+         }
+      }
+      &:hover, &:hover span, &:hover i{
+         cursor: pointer;
+         border-color: $colorOrange;
+         color: $colorOrange;
+      }
+      
+   }
+   .slick-initialized .slick-slide{
+      @include flexbox(null, center, center);
+   }
+   .slick-dots{
+      position: absolute;
+      top: -30px;
+      display: flex;
+      li{
+         list-style-type: none;
+         width: 20px;
+         height: 3px;
+         background-color: $colorTitle;
+         cursor: pointer;
+         button{
+            display: none;
+         }
+      }
+      .slick-active{
+         background-color: $colorHoverNavMenu;  
+      }
+   }
+}
