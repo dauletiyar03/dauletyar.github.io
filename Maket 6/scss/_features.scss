@@ -1,0 +1,20 @@
+.features{
+   
+   &_item{
+      .title{
+         color: $featuresTitleColor;
+         font-family: "PlayFairBold", sans-serif;
+         font-size: 85px;
+      }
+      .subtitle{
+         color: $featuresSubtitleColor;
+         font-family: "RalewaySemiBold", sans-serif;
+         font-size: 22px;
+      }
+      &-info{
+         font-family: "RalewayLight", sans-serif;
+         font-size: 18px;
+         letter-spacing: 0.5px;
+      }
+   }
+}

@@ -1,0 +1,36 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "fonts";
+body{
+   overflow-x: hidden;
+}
+.wrapper{
+   min-width: 320px;
+   margin: 0 auto;
+   .container{
+      padding: 0 15px;
+   }
+}
+@media screen and (min-width: 698px){
+   .wrapper{
+      min-width: 698px;
+      .container{
+         padding: 0 35px;
+      }
+   }
+}
+@media screen and (min-width: 1170px){
+   .wrapper{
+      min-width: 1360px;
+      .container{
+         padding: 0 95px;
+      }
+   }
+}
+
+@import "header";
+@import "tablet768/header768";
+@import "desktop/header1170";
+
+@import "features";

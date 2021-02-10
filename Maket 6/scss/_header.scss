@@ -1,0 +1,135 @@
+.header{
+   background: linear-gradient(rgba(17, 37, 55, 0.8), rgba(17, 37, 55, 0.8)), url(../images/header-bgimg.png) center no-repeat;
+   background-position: center 0;
+   background-size: cover;
+   .bg-image{
+      display: none;
+   }
+   &__logo{
+      padding: 25px 0 120px 0;
+      .logo768, .logodesktop{
+         display: none;
+      }
+   }
+   &__menu{
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      a{
+         color: #ffffff;
+      }
+      .menu_input, &-items{
+         display: none;
+      }
+      .menu_btn{
+         position: absolute;
+         bottom: 122px;
+         right: 0;
+         cursor: pointer;
+         z-index: 12;
+         padding: 10px 0;
+         transition: 0.5s;
+      }
+      .burger-stick{
+         background-color: #fff;
+         display: flex;
+         width: 35px;
+         height: 3px;
+         position: relative;
+         &::after, &::before{
+            content: '';
+            width: 35px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #fff;
+            position: absolute;
+         }
+         &::after{
+            top: 10px;
+         }
+         &::before{
+            top: -10px;
+         }
+      }
+      &-items{
+         position: absolute;
+         top: -172px;
+         left: -15px;
+         right: -15px;
+         padding-top: 100px;
+         background-color: #112537;
+         font-family: "RalewaySemiBold", sans-serif;
+         font-size: 16px;
+         z-index: 11;
+         li{
+            padding-bottom: 45px;
+            &:last-child{
+               padding-bottom: 65px;
+            }
+         }
+         a:hover{
+            color: #f8a25a;
+         }
+      }
+      .icons{
+         @include flexbox(null, space-evenly);
+      }
+      .menu_input:checked ~ .header__menu-items{
+         display: block;
+      }
+      .menu_input:checked ~ .menu_btn>span{
+         transform: rotate(45deg);
+      }
+      .menu_input:checked ~ .menu_btn>span::before{
+         top: 0;
+         transform: rotate(0);
+      }
+      .menu_input:checked ~ .menu_btn>span::after{
+         top: 0;
+         transform: rotate(90deg);
+      }
+   }
+   &__number{
+      display: none;
+   }
+   &__title{
+      color: #ffffff;
+      text-align: center;
+      .title{
+         font-family: "PlayFairBold", sans-serif;
+         font-size: 48px;
+         padding-bottom: 26px;
+      }
+      .text{
+         font-family: "MillerThin", sans-serif;
+         font-size: 18px;
+      }
+   }
+   &__btn{
+      text-align: center;
+      padding: 48px 0 170px 0;
+      position: relative;
+      &::after{
+         content: url(../icons/Arrow-OutRight-icon_копия.png);
+         display: block;
+         transform: rotate(90deg);
+         position: absolute;
+         top: 120px;
+         left: 45%;
+      }
+      .btn{
+         background-color: $headerBtnColor;
+         box-shadow: 5px 8px 21px 8px rgba(0, 1, 6, 0.06);
+         color: #ffffff;
+         font-family: "RalewayExtraBold", sans-serif;
+         font-size: 14px;
+         letter-spacing: 1.34px;
+         text-decoration: none;
+         text-transform: uppercase;
+         padding: 18px 35px;
+      }
+   }
+   &__icons{
+      display: none;
+   }
+}
