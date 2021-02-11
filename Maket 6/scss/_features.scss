@@ -1,5 +1,5 @@
 .features{
-   
+   // padding-top: 60px;
    &_item{
       .title{
          color: $featuresTitleColor;
@@ -10,6 +10,7 @@
          color: $featuresSubtitleColor;
          font-family: "RalewaySemiBold", sans-serif;
          font-size: 22px;
+         padding-bottom: 20px;
       }
       &-info{
          font-family: "RalewayLight", sans-serif;
